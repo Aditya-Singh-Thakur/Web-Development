@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Ajax
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: 100px;
+        width:auto;
+      }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  .great{
+		background-color: #5a3479;
+		
+	  }
+  </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  
+  <body>
+      <button>Button</button>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+      <script>
+          $(function(){
+              $("#facebook").load("Ajax/SomeData.txt");
+              $("#apple").load("Ajax/SomeData.txt #paragraph1");
+              //$("button").click(function(){
+                  //$.ajax({url : "Ajax/SomeData.txt", success : function(data){
+                      //$("#microsoft").html(data);
+              $("button").click(function(){
+                  $.ajax({url : "Ajax/SomeData.txt"}).done(function(SomeData){
+                      $("#microsoft").html(SomeData);
+                  });
+                  });
+              });
+      </script>
+  </body>
+  
+  
+</html>

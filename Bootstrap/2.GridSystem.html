@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Grid System</title>
+	<style>
+		#deviceSize{
+		margin-bottom: 30px;
+		}
+		.bluebox{
+			background-color: blue;
+			height: 200px;
+		}
+		.greenbox{
+			background-color: green;
+			height: 200px;
+		}
+	  </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+	<div id="deviceSize">Device Size: </div>
+	<div class="bluebox col-md-8 col-sm-6 col-xs-3 col-lg-8">col-md-8 col-sm-6 col-xs-3 col-lg-8</div>
+	<div class="greenbox col-md-4 col-sm-6 col-xs-9 col-lg-4">col-md-4 col-sm-6 col-xs-9 col-lg-4</div>
+	  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Latest compiled and minified JavaScript -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	  <script>
+		  $(function(){
+			  $(window).resize(function(){
+				  var windowWidth = $(window).width();
+				  if(windowWidth<768){
+					  $("#deviceSize").text('Device Size: ' + windowWidth + 'px - Extra small devices(Phones)');
+				  }else if(windowWidth<992){
+					  $("#deviceSize").text('Device Size: ' + windowWidth + 'px - Small devices(Tablets)');
+				  }else if(windowWidth<1200){
+					  $("#deviceSize").text('Device Size: ' + windowWidth + 'px - Medium devices(Desktops)');
+				  }else{
+					  $("#deviceSize").text('Device Size: ' + windowWidth + 'px - Large devices(Desktops)');
+				  }
+			  });
+		  });
+	  </script>
+  </body>
+</html>

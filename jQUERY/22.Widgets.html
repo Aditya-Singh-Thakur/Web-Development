@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+		Widgets
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: 100px;
+        width:auto;
+        
+      }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  .great{
+		background-color: #5a3479;	
+	  }
+  </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  
+  <body>
+        <div class="bluebox ui-corner-all" id="facebook">
+            <p>
+				<label for="myInput">Enter a value:</label>
+				<input id="myInput" name="myInput" value="30" title="Please enter the value.">
+			</p>
+      </div>
+      <div class="yellowbox ui-corner-all" id="apple">
+          <ul>
+			  <li><a href="#tab1">tab1</a></li>
+			  <li><a href="#tab2">tab2</a></li>
+			  <li><a href="#tab3">tab3</a></li>
+		  </ul>
+		  <div id="tab1"><p>content 1</p></div>
+		  <div id="tab2"><p>content 2</p></div>
+		  <div id="tab3"><p>content 3</p></div>
+    </div>
+    <div class="greenbox ui-corner-all" id="microsoft" title="This is microsoft.">
+      <p>
+        Microsoft.
+		</p>
+	  </div>
+    <script>
+    $(function(){
+		$("#myInput").spinner({
+			min: 0,
+			max: 100,
+			step: 3
+		});
+		$("#apple").tabs({
+			collapsible: true,
+			event: "mouseover"
+		});
+		$("#apple").tabs().find(".ui-tabs-nav").sortable({
+			axis: "x"
+		});
+		//$(document).tooltip();
+		$("#myInput").tooltip({
+			show: {effect: "explode"}
+		});
+    });  
+    </script>
+      </body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      Change HTML content and attributes
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: auto;
+        width:auto;
+      }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: auto;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: auto;
+		width: auto;
+	  }
+	  .great{
+		background-color: #5a3479;
+		
+	  }
+  </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="bluebox" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p id="microsoftParagraph">
+        Microsoft.
+      </p>
+        <p>
+            <a href="http://www.microsoft.com" title="Microsoft" id="microsoftLink">Microsoft Link</a></p>
+      
+    </div>
+      <p>Enter: <input></p>
+      <button id="changeFacebook">Change facebook text</button>
+      <button id="changeApple">Change apple html</button>
+      <button id="changeInput">Change microsoft input</button>
+      <button id="changeMicrosoft">Change Microsoft </button>
+      <button id="addText">Add text </button>
+  
+    <script>
+    $(function(){
+    $("#changeFacebook").click(function(){
+        $("#facebook").text("This is facebook.");
+    });
+        $("#changeApple").click(function(){
+        $("#apple").html("<p>This is apple.</p><p>New IOS available.</p>");
+    });
+         $("#changeInput").click(function(){
+        $("input").val("Sample");
+    });
+        $("#changeMicrosoft").click(function(){
+        $("#microsoftLink").attr({"href" : "http://www.google.com", "title" : "Google"});
+    });
+        $("#addText").click(function(){
+            //$("#microsoft").append("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li>");
+        //$("#microsoft").prepend("<ul><li>BMW</li><li>Audi</li><li>Mercedes</li>");
+            $("microsoftParagraph").after("<p>New paragraph.</p>");
+        });
+    });
+    </script>
+      </body>
+</html>

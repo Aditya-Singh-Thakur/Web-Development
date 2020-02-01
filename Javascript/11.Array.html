@@ -1,0 +1,47 @@
+<!--1.alertmessage.html-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+     Array
+    </title>
+  </head>
+  <body>
+    <p id="myparagraph">
+      Javascript.
+    </p>
+    <script>
+     var shoppinglist = ["bread", "eggs", "milk"];
+        //var shoppinglist = new Array("bread", "egg", "milk");
+       showresult(shoppinglist);
+        showresult(shoppinglist[0]);
+        showresult(shoppinglist[2]);
+        function showresult(x){
+        document.getElementById("myparagraph").innerHTML += "<br />" + x;
+        }
+        shoppinglist[1] = "yogurt";
+        showresult(shoppinglist);
+        delete shoppinglist[1];
+        showresult(shoppinglist);
+        shoppinglist[1] = "yogurt";
+        showresult(shoppinglist);
+        shoppinglist.splice(1,1)
+        showresult(shoppinglist);
+        shoppinglist.splice(1,2);
+        showresult(shoppinglist);
+        shoppinglist.splice(1,0,"banana", "apple");
+        showresult(shoppinglist);
+        shoppinglist.sort();
+        showresult(shoppinglist);
+        shoppinglist.reverse();
+        showresult(shoppinglist);
+        var mystring = 'ABCD';
+        var myArray = mystring.split(' ',);//2 for 2 items in the array
+        showresult(myArray);
+        
+        
+    </script>
+  </body>
+  
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset ="utf-8">
+    <title>
+      jQuery User interface
+    </title>
+    <style>
+      .bluebox{
+        background-color: #3A5795;
+        color: white;
+        height: 100px;
+        width:auto;
+      }
+	  .yellowbox{
+		background-color: rgb(222, 224, 85);
+		height: 100px;
+		width: auto;
+	  }
+	  .greenbox{
+		background-color: #31af37;
+		height: 100px;
+		width: auto;
+	  }
+	  .great{
+		background-color: #5a3479;
+		
+	  }
+  </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="bluebox ui-corner-all" id="facebook">
+      <p>
+        Facebook is 
+        <span class="great">
+          great
+        </span>
+        .
+      </p>
+      
+    </div>
+    <div class="yellowbox" id="apple">
+      <p>
+        Apple.
+      </p>
+      
+    </div>
+    <div class="greenbox" id="microsoft">
+      <p>
+        Microsoft.
+      </p>
+      
+    </div>
+      <div class="ui-state-error" style="height:100px;margin-top:20px">
+      <p>Error message</p></div>
+      <script>
+          $(function(){
+              $("#facebook").draggable();
+              });
+      </script>
+  </body>
+  
+  
+</html>
